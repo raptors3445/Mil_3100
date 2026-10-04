@@ -1,87 +1,54 @@
 /**
- * Mil_3100 - Crafting & Mechanical Trap System (Phase 1)
- * Handles mechanical components, brace upgrades, and tactical traps.
+ * Mil_3100 - Precision Engineering & Crafting Framework (Phase 1)
+ * Simulates mechanical tolerances, spring dynamics, pneumatic pressure, and ambient thermal effects.
  */
 
-class CraftingSystem {
+class PrecisionCraftingSystem {
     constructor() {
-        // Inventory of mechanical parts collected in 19th century settings
-        this.resources = {
-            scrapMetal: 0,
-            gearsAndSprings: 0,
-            pneumaticValves: 0,
-            gunpowder: 0,
-            leatherStraps: 0
+        this.inventory = {
+            brassGears: 12,
+            temperedSprings: 8,
+            pneumaticValves: 5,
+            highTensileWire: 15,
+            industrialLubricant: 3
         };
 
-        // Available Blueprints
-        this.recipes = {
-            legBraceUpgrade: {
-                name: "Reinforced Mechanical Leg Support",
-                cost: { scrapMetal: 15, gearsAndSprings: 10, leatherStraps: 5 },
-                effect: { limpSeverityReduction: 0.15, staminaCostMultiplier: 0.8 }
+        this.blueprints = {
+            customBraceStabilizer: {
+                title: "Custom Dual-Spring Ankle Stabilizer",
+                components: { brassGears: 4, temperedSprings: 4, industrialLubricant: 1 },
+                specs: { tensionForceKg: 45.0, noiseReductionFactor: 0.35, durabilityCostPerStep: 0.05 }
             },
-            pneumaticTripwire: {
-                name: "Pneumatic Knockdown Trap",
-                cost: { scrapMetal: 8, pneumaticValves: 2, gearsAndSprings: 4 },
-                effect: { stunsEnemyDuration: 4.5, noiseGenerated: 12 }
-            },
-            silentLockpick: {
-                name: "Precision Mechanical Lockpick",
-                cost: { scrapMetal: 5, gearsAndSprings: 3 },
-                effect: { bypassLevel: 2, durability: 3 }
-            },
-            smokeCanister: {
-                name: "Black Powder Smoke Screen",
-                cost: { gunpowder: 10, scrapMetal: 4 },
-                effect: { visionBlockRadius: 6.0, duration: 8.0 }
+            pneumaticTripTrap: {
+                title: "High-Pressure Pneumatic Tripwire Trap",
+                components: { pneumaticValves: 2, highTensileWire: 3, brassGears: 2 },
+                specs: { triggerTensionKg: 12.0, mechanicalDelayMs: 150, stunDurationSec: 5.0 }
             }
         };
     }
 
-    addResource(type, amount) {
-        if (this.resources.hasOwnProperty(type)) {
-            this.resources[type] += amount;
-            return true;
-        }
-        return false;
-    }
+    /**
+     * Calculates pneumatic trap responsiveness based on ambient environmental temperature.
+     */
+    calculateTrapPerformance(blueprintKey, ambientTempCelsius = 15) {
+        const blueprint = this.blueprints[blueprintKey];
+        if (!blueprint) return null;
 
-    canCraft(recipeKey) {
-        const recipe = this.recipes[recipeKey];
-        if (!recipe) return false;
-
-        for (const [res, count] of Object.entries(recipe.cost)) {
-            if ((this.resources[res] || 0) < count) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    craftItem(recipeKey, playerInstance) {
-        if (!this.canCraft(recipeKey)) {
-            return { success: false, message: "Insufficient mechanical parts" };
+        // Viscosity impact on pneumatic fluid under cold temperatures (e.g. Vrin snow levels)
+        let delayMultiplier = 1.0;
+        if (ambientTempCelsius < 0) {
+            delayMultiplier = 1.0 + (Math.abs(ambientTempCelsius) * 0.04); // Pressure drop / oil thickening
         }
 
-        const recipe = this.recipes[recipeKey];
-        for (const [res, count] of Object.entries(recipe.cost)) {
-            this.resources[res] -= count;
-        }
-
-        // Apply direct upgrades if crafting leg support
-        if (recipeKey === 'legBraceUpgrade' && playerInstance) {
-            playerInstance.limpSeverity = Math.max(0.10, playerInstance.limpSeverity - recipe.effect.limpSeverityReduction);
-        }
-
+        const effectiveDelay = blueprint.specs.mechanicalDelayMs * delayMultiplier;
         return {
-            success: true,
-            item: recipe.name,
-            effects: recipe.effect
+            blueprintName: blueprint.title,
+            effectiveResponseDelayMs: Math.round(effectiveDelay),
+            operationalStatus: ambientTempCelsius < -15 ? "CRITICAL_PRESSURE_DROP" : "OPTIMAL"
         };
     }
 }
 
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { CraftingSystem };
+    module.exports = { PrecisionCraftingSystem };
 }
