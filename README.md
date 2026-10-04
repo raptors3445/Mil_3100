@@ -1,26 +1,58 @@
 <div align="center">
 
-  <h1>⚙️ MIL_3100 ENGINE</h1>
-  <h3>AAA High-Fidelity Biomechanical & Emergent Stealth Simulation</h3>
+  <!-- HERO BANNER -->
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:111111,100:8b0000&height=280&section=header&text=MIL_3100%20ENGINE&fontSize=50&fontColor=ffffff&desc=HALF-HUMAN%20%E2%80%A2%20HALF-MECHANICAL%20%E2%80%A2%20BIOMECHANICAL%20SIMULATION&descSize=16&descAlignY=70" width="100%" alt="Mil_3100 Banner" />
 
+  <br />
+
+  <!-- BADGES -->
   <p>
+    <img src="https://img.shields.io/badge/PROTAGONIST-MIL%20CYBORG%20TRAUMA-8b0000?style=for-the-badge&logo=android&logoColor=white" alt="Protagonist" />
     <img src="https://img.shields.io/badge/NODE.JS-18%2B-026E00?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
-    <img src="https://img.shields.io/badge/ARCHITECTURE-AAA%20ENGINE-0052CC?style=for-the-badge&logo=cpu&logoColor=white" alt="Architecture" />
-    <img src="https://img.shields.io/badge/AI-COGNITIVE%20BEHAVIOR-D9381E?style=for-the-badge&logo=brain&logoColor=white" alt="AI" />
-    <img src="https://img.shields.io/badge/LICENSE-MIT-FFAB00?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="License" />
+    <img src="https://img.shields.io/badge/AI-EMERGENT%20BRAIN-D9381E?style=for-the-badge&logo=brain&logoColor=white" alt="AI" />
+    <img src="https://img.shields.io/badge/PHYSICS-SURFACE%20ACOUSTICS-0052CC?style=for-the-badge&logo=cpu&logoColor=white" alt="Physics" />
   </p>
+
+  <p><b>AAA Action-Drama Logic & Biomechanical Trauma Simulation Engine</b></p>
 
 </div>
 
 <hr />
 
-<h2>📑 Core Engine Architecture</h2>
+<!-- VISUAL DUALITY SECTION -->
+<div align="center">
+  <h3>⚡ THE CYBERNETIC & HUMAN DUALITY OF MIL ⚡</h3>
+  
+  <table border="0" width="100%">
+    <tr>
+      <td width="50%" align="center" style="background-color: #1a1a1a; padding: 15px; border-radius: 10px;">
+        <h4>🧠 HUMAN NEUROLOGICAL SIDE</h4>
+        <p>• Dynamic Cardiac Loop (40 - 180 BPM)</p>
+        <p>• Pain Severity Index & Hand Tremors</p>
+        <p>• Biological Stamina & Muscle Fatigue</p>
+      </td>
+      <td width="50%" align="center" style="background-color: #0f172a; padding: 15px; border-radius: 10px;">
+        <h4>🦾 MECHANICAL / BRACE SIDE</h4>
+        <p>• Orthopedic Titanium Brace Stress</p>
+        <p>• Sub-Zero Thermal Joint Contraction</p>
+        <p>• Mechanical Creak & Acoustic Output</p>
+      </td>
+    </tr>
+  </table>
+</div>
 
-<table>
+<br />
+
+<!-- SECTION 1 -->
+<img src="https://capsule-render.vercel.app/api?type=slice&color=8b0000&height=60&text=1.%20CORE%20ENGINE%20ARCHITECTURE&fontSize=20&fontColor=ffffff" width="100%" />
+
+<br /><br />
+
+<table width="100%">
   <tr>
-    <th width="30%">Module Name</th>
-    <th width="20%">Script File</th>
-    <th width="50%">Engine Functionality</th>
+    <th width="25%">Module</th>
+    <th width="25%">Script File</th>
+    <th width="50%">System Function</th>
   </tr>
   <tr>
     <td><b>Player Biomechanics</b></td>
@@ -28,12 +60,12 @@
     <td>Simulates Mil's asymmetric limp gait, mechanical leg brace stress, and stamina strain.</td>
   </tr>
   <tr>
-    <td><b>Trauma & Neuro Engine</b></td>
+    <td><b>Trauma & Neuro</b></td>
     <td><code>neuro_biomechanics.js</code></td>
-    <td>Calculates dynamic heart rate (BPM), limb pain levels, and joint grease stiffness in sub-zero alpine cold.</td>
+    <td>Calculates dynamic heart rate (BPM), limb pain levels, and joint grease stiffness in sub-zero cold.</td>
   </tr>
   <tr>
-    <td><b>Cognitive Enemy AI</b></td>
+    <td><b>Emergent AI Brain</b></td>
     <td><code>emergent_ai_brain.js</code></td>
     <td>Multi-layered guard behavior, fatigue, psychological panic reactions, and morale evaluation.</td>
   </tr>
@@ -43,7 +75,7 @@
     <td>Guard hearing thresholds, optic vision cones, and asymmetric limp footstep rhythm detection.</td>
   </tr>
   <tr>
-    <td><b>Surface & Material Physics</b></td>
+    <td><b>Surface Physics</b></td>
     <td><code>material_surface_physics.js</code></td>
     <td>Calculates friction coefficients and decibel dissipation across wet cobblestone, mud, and snow.</td>
   </tr>
@@ -53,15 +85,18 @@
     <td>Mechanical trap engineering factoring in spring tension (kg) and pneumatic valve viscosity.</td>
   </tr>
   <tr>
-    <td><b>Master Engine Host</b></td>
+    <td><b>Master Host</b></td>
     <td><code>index.js</code></td>
     <td>Main loop assembly connecting biomechanics, surface friction, acoustics, and AI into a single frame tick.</td>
   </tr>
 </table>
 
-<hr />
+<br />
 
-<h2>📂 Repository Architecture Map</h2>
+<!-- SECTION 2 -->
+<img src="https://capsule-render.vercel.app/api?type=slice&color=0052CC&height=60&text=2.%20REPOSITORY%20STRUCTURE&fontSize=20&fontColor=ffffff" width="100%" />
+
+<br /><br />
 
 <pre>
 <code>
@@ -81,11 +116,14 @@ Mil_3100/
 </code>
 </pre>
 
-<hr />
+<br />
 
-<h2>⚡ Execution Command</h2>
+<!-- SECTION 3 -->
+<img src="https://capsule-render.vercel.app/api?type=slice&color=026E00&height=60&text=3.%20EXECUTION%20&%20SIMULATION&fontSize=20&fontColor=ffffff" width="100%" />
 
-<p>To run the full AAA simulation loop via Node.js, execute the following command in terminal:</p>
+<br /><br />
+
+<p>Run the full AAA biomechanical simulation loop in Node.js:</p>
 
 <pre>
 <code>npm start</code>
@@ -94,5 +132,7 @@ Mil_3100/
 <hr />
 
 <div align="center">
-  <p><i>Mil_3100 Core Simulation Infrastructure — Developed under the MIT License</i></p>
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark&quote=The%20flesh%20limps,%20the%20steel%20creaks,%20but%20the%20will%20remains%20unbroken.&author=Mil_3100%20Protagonist" alt="Mil Quote" />
+  <br /><br />
+  <p><i>Mil_3100 Core Engine Infrastructure — Developed under the MIT License</i></p>
 </div>
