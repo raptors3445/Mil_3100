@@ -1,37 +1,98 @@
+<div align="center">
 
-⚙️ Mil_3100: Advanced Biomechanical Game Engine
-موتور اختصاصی و شبیه‌ساز منطق فیزیک، بیومکانیک و هوش مصنوعی برای بازی Mil_3100. این پروژه به صورت تخصصی روی جزئیات حرکت پاهای لنگ کاراکتر اصلی (Mil)، فیزیک سطوح، صدای گام‌ها و رفتار هوشمند نگهبانان تمرکز دارد.
-🏛️ معماری و جریان داده‌ها (Engine Architecture)
- * بیومکانیک و آناتومی میل: محاسبه دقیق لنگیدن و وزن پاها، ضربان قلب و میزان استرس، استهلاک و صدای جیرجیر آتل فلزی.
- * شبیه‌سازی محیط و سطح: اصطکاک سنگ‌فرش، برف و گل، تاثیر سرما روی آتل فلزی، میزان بازتاب صدای گام‌ها.
- * انتشار آکوستیک صدا: محاسبه فرکانس و شدت صوت در محیط‌های مختلف.
- * هوش مصنوعی ارگانیک نگهبانان: مخروط دید و بازتاب نور، تشخیص ریتم نامتقارن پای لنگ، سیستم ترس، خستگی و تصمیم‌‌گیری.
-🚀 ویژگی‌های فنی موتور (Core Features)
- * شبیه‌سازی بیومکانیک و عصبی (src/neuro_biomechanics.js):
- * گام برداشتن روی پای راست (سالم) و پای چپ (آسیب‌دیده) کاملاً متفاوت محاسبه می‌شود.
- * در سرمای زیر صفر، روغن مفاصل آتل سفت شده و اصطکاک و صدای حرکت را افزایش می‌دهد.
- * میزان درد و خستگی به صورت مستقیم روی لرزش دست‌ها در نشانه‌گیری تأثیر می‌گذارد.
- * هوش مصنوعی هوشمند نگهبانان (src/stealth_ai.js & src/emergent_ai_brain.js):
- * نگهبانان می‌توانند ریتم یک‌درمیان (لنگ‌لنگان) صدای پای Mil را شناسایی کرده و مشکوک شوند.
- * روحیات، خستگی و باران روی رفتار، سرعت حرکت و عقب‌نشینی نگهبانان تأثیر می‌گذارد.
- * فیزیک سطوح و مهندسی تله‌ها (src/material_surface_physics.js):
- * محاسبه دقیق صدای پا روی سطوح چوبی، سنگ‌فرش خیس و برف.
- * سیستم ابزارسازی با فرمول‌های واقعی کشش فنر و فشار پوماتیک.
-📂 ساختار ماژول‌ها (Repository Map)
+  <h1>⚙️ MIL_3100 ENGINE</h1>
+  <h3>AAA High-Fidelity Biomechanical & Emergent Stealth Simulation</h3>
+
+  <p>
+    <img src="https://img.shields.io/badge/NODE.JS-18%2B-026E00?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
+    <img src="https://img.shields.io/badge/ARCHITECTURE-AAA%20ENGINE-0052CC?style=for-the-badge&logo=cpu&logoColor=white" alt="Architecture" />
+    <img src="https://img.shields.io/badge/AI-COGNITIVE%20BEHAVIOR-D9381E?style=for-the-badge&logo=brain&logoColor=white" alt="AI" />
+    <img src="https://img.shields.io/badge/LICENSE-MIT-FFAB00?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="License" />
+  </p>
+
+</div>
+
+<hr />
+
+<h2>📑 Core Engine Architecture</h2>
+
+<table>
+  <tr>
+    <th width="30%">Module Name</th>
+    <th width="20%">Script File</th>
+    <th width="50%">Engine Functionality</th>
+  </tr>
+  <tr>
+    <td><b>Player Biomechanics</b></td>
+    <td><code>phase1_core.js</code></td>
+    <td>Simulates Mil's asymmetric limp gait, mechanical leg brace stress, and stamina strain.</td>
+  </tr>
+  <tr>
+    <td><b>Trauma & Neuro Engine</b></td>
+    <td><code>neuro_biomechanics.js</code></td>
+    <td>Calculates dynamic heart rate (BPM), limb pain levels, and joint grease stiffness in sub-zero alpine cold.</td>
+  </tr>
+  <tr>
+    <td><b>Cognitive Enemy AI</b></td>
+    <td><code>emergent_ai_brain.js</code></td>
+    <td>Multi-layered guard behavior, fatigue, psychological panic reactions, and morale evaluation.</td>
+  </tr>
+  <tr>
+    <td><b>Acoustic Perception</b></td>
+    <td><code>stealth_ai.js</code></td>
+    <td>Guard hearing thresholds, optic vision cones, and asymmetric limp footstep rhythm detection.</td>
+  </tr>
+  <tr>
+    <td><b>Surface & Material Physics</b></td>
+    <td><code>material_surface_physics.js</code></td>
+    <td>Calculates friction coefficients and decibel dissipation across wet cobblestone, mud, and snow.</td>
+  </tr>
+  <tr>
+    <td><b>Precision Crafting</b></td>
+    <td><code>crafting_system.js</code></td>
+    <td>Mechanical trap engineering factoring in spring tension (kg) and pneumatic valve viscosity.</td>
+  </tr>
+  <tr>
+    <td><b>Master Engine Host</b></td>
+    <td><code>index.js</code></td>
+    <td>Main loop assembly connecting biomechanics, surface friction, acoustics, and AI into a single frame tick.</td>
+  </tr>
+</table>
+
+<hr />
+
+<h2>📂 Repository Architecture Map</h2>
+
+<pre>
+<code>
 Mil_3100/
-├── src/
-│   ├── index.js                     # هسته اصلی و یکپارچه‌ساز موتور
-│   ├── phase1_core.js              # کنترل‌کننده فیزیک راه رفتن Mil
-│   ├── neuro_biomechanics.js        # شبیه‌ساز ضربان قلب، درد و سیستم عصبی
-│   ├── stealth_ai.js                # مخروط دید و سیستم شنود نگهبانان
-│   ├── emergent_ai_brain.js         # مغز و تصمیم‌گیری ارگانیک نگهبانان
-│   ├── material_surface_physics.js  # فیزیک اصطکاک و آکوستیک سطوح
-│   ├── crafting_system.js           # سیستم ابزارسازی و ساخت تله‌ها
-│   ├── phase1_levels.js             # پایگاه داده ۱۰۰ مرحله فاز اول
-│   └── game_engine.js               # موتور یکپارچه‌ساز اول
-├── package.json                     # تنظیمات اجرا و شناسه پروژه
-└── README.md                        # مستندات و ویترین اصلی پروژه
-⚡ نحوه اجرا (Execution)
-برای اجرای شبیه‌ساز در ترمینال Node.js دستور زیر را بزنید:
-npm start
-پروژه تحت مجوز MIT ثبت شده است.
+├── 📁 src/
+│   ├── 📄 index.js                   &lt;-- Primary Simulation Entry Point
+│   ├── 📄 phase1_core.js              &lt;-- Gait Physics &amp; Brace Dynamics
+│   ├── 📄 neuro_biomechanics.js        &lt;-- Biological Trauma &amp; Cardiac Loop
+│   ├── 📄 stealth_ai.js                &lt;-- Vision Cone &amp; Audio Propagation
+│   ├── 📄 emergent_ai_brain.js         &lt;-- Guard Brain Behavior Tree
+│   ├── 📄 material_surface_physics.js  &lt;-- Terrain Acoustics &amp; Slippage
+│   ├── 📄 crafting_system.js           &lt;-- Pneumatic &amp; Trap Engineering
+│   ├── 📄 phase1_levels.js             &lt;-- 100-Level Phase 1 Database
+│   └── 📄 game_engine.js               &lt;-- Legacy Integration Framework
+├── 📄 package.json                     &lt;-- Node Manifest &amp; Engine Scripts
+└── 📄 README.md                        &lt;-- Visual Engine Portal
+</code>
+</pre>
+
+<hr />
+
+<h2>⚡ Execution Command</h2>
+
+<p>To run the full AAA simulation loop via Node.js, execute the following command in terminal:</p>
+
+<pre>
+<code>npm start</code>
+</pre>
+
+<hr />
+
+<div align="center">
+  <p><i>Mil_3100 Core Simulation Infrastructure — Developed under the MIT License</i></p>
+</div>
