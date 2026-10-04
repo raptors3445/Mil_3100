@@ -1,0 +1,17 @@
+{
+  "name": "mil_3100",
+  "version": "1.0.0",
+  "description": "Core mechanics and story framework for Mil_3100 action-drama game",
+  "main": "src/phase1_core.js",
+  "scripts": {
+    "start": "node src/phase1_core.js"
+  },
+  "keywords": [
+    "game-design",
+    "mechanics",
+    "narrative-driven",
+    "stealth"
+  ],
+  "author": "Milad",
+  "license": "UNLICENSED"
+}
