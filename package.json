@@ -1,17 +1,19 @@
 {
   "name": "mil_3100",
   "version": "1.0.0",
-  "description": "Core mechanics and story framework for Mil_3100 action-drama game",
-  "main": "src/phase1_core.js",
+  "description": "AAA High-Fidelity Action-Drama Game Engine - Protagonist Mil Biomechanics & Emergent Stealth Systems",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node src/phase1_core.js"
+    "start": "node src/index.js",
+    "test": "node src/index.js"
   },
   "keywords": [
-    "game-design",
-    "mechanics",
-    "narrative-driven",
-    "stealth"
+    "game-engine",
+    "stealth-ai",
+    "biomechanics",
+    "emergent-behavior",
+    "javascript"
   ],
   "author": "Milad",
-  "license": "UNLICENSED"
+  "license": "MIT"
 }
